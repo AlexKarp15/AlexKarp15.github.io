@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+}
+.wrapper{
+    max-width: 1127px;
+    width: 100%;
+    margin:0 auto;
+}
+.row::after{
+    clear: both;
+    content:"";
+    display: block;
+}
+.w-1{
+    width: 100%;
+    float: left;
+}
+.w-2{
+    width: 50%;
+    float: left;
+}
+.w-3{
+    width: 33.33%;
+    float: left;
+}
+.w-4{
+    width: 25%;
+    float: left;
+}
+.w-5{
+    width: 20%;
+    float: left;
+}
+.w-6{
+    width: 16.66%;
+    float: left;
+}
+.w-7{
+    width: 14.28%;
+    float: left;
+}
+.w-10{
+    width: 10%;
+    float: left;
+}
+.w-20{
+    width: 5%;
+    float: left;
+}
+.aligh-right{
+    text-align: right;
+}
+#search{
+    border-bottom: 1px solid #324950;
+    display: inline-block;
+    max-width: 350px;
+    width: 100%;
+    padding-bottom: 3px;
+    margin: 10px 0 43px 0;
+}
+#search input{
+    font-size: 16px;
+    color: #324950;
+    background-color: transparent;
+    border:none;
+    max-width: 324px;
+    width: 100%;
+
+}
+#search input::placeholder{
+    color: #324950;
+}
+
+#search button{
+    background:url(/images/ico_search.png) no-repeat center;
+    height: 18px;
+    width:18px;
+    font-size: 0;
+    border: none;
+    margin-bottom: 1px;
+}
+.flex{
+    display: flex;
+    align-items: flex-end;
+}
+#menu{
+    font-family: "Heebo", serif;
+}
+#menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu ul li{
+    display: inline;
+    margin-left: 15px;
+}
+#menu ul li a{
+    color: #324950;
+    font-size: 18px;
+    font-weight: bold;   
+    text-decoration: none;
+    transition: color .3s;
+}
+#menu ul li a:hover{
+    color:#57984C;
+}
+#logo{
+    margin:10px 0 0 0;
+
+}
+#logo img{
+    height:113px;
+    width: 226px;
+}
+#slider{
+    text-align: center;
+    background:url(/images/bg.png) no-repeat center;
+    padding: 338px 0;
+    margin-top: -135px;
+}
+#slider h1{
+    color:#735440;
+    font-size: 48px;
+    font-weight: bold;
+}
+#slider a{
+    display: block;
+    background-color: #57984C;
+    color:#fff;
+    font-size: 16px;
+    text-decoration: none;
+    width:155px;
+    height: 55px;
+    margin: 0 auto;
+    text-transform: uppercase; 
+    line-height: 55px;
+    font-family: "Roboto";
+}
+#categories{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+#gray{
+    background:url(/images/Union.png) no-repeat center;
+    background-color:#F7F7F7;
+    padding: 50px 0;
+    height: 1098px;
+    width: 2115px;
+    width:100%;
+    font-size: 20px;
+}
+#gray-img{
+    height: 500px;
+    z-index: 1;
+    width: 540px;
+}
+#gray h1{
+    font-size: 64px;
+    color:#324950;
+    margin-bottom: 20px;
+}
+.overlay{ 
+    position: relative;
+    top:-310px;
+    left:-190px;
+    z-index: 2;
+}
+.activities{
+    text-align: center;
+    padding: 50px 0;
+    background-color: #EDEDED;
+}
+.activities h3{
+    font-size: 24px;
+    font-weight: bold;
+    color:#57984C;
+
+}
+.activities h1{
+    font-size: 48px;
+    font-weight: bold;
+    color:#324950;
+
+}
+.centr{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    font-family: "Roboto";
+}
+#menu-footer{
+    background-color: #2D3F45;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase; 
+}
+#menu-footer ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu-footer ul li{
+    display: inline;
+    margin-left: 15px;
+}
+#menu-footer ul li a{
+    color: #f7f8f9;
+    font-size: 16px;  
+    text-decoration: none;
+    transition: color .3s;
+}
+#menu-footer ul li a:hover{
+    color:#edf50d;
+}
+#menu-footer img{
+    height: 31px;
+    width: 31px;
+}
+.end{
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #324950;
+    color:#B9B9B9;
+    font-size: 14px;
+}
