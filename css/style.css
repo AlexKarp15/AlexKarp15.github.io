@@ -234,9 +234,10 @@ body{
     font-size: 14px;
 }
 blockquote {
-    padding-left: 15px;
+    padding-left: 30px;
     border-left: 4px solid red;
     border-radius: 4px;
+    margin-left: 15px;
 }
 #white{
     background: white;
