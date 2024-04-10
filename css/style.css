@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: "Roboto Slab", serif;
+    color:#324950
 }
 .wrapper{
     max-width: 1127px;
@@ -160,6 +161,7 @@ body{
 #gray h1{
     font-size: 64px;
     color:#324950;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 .overlay{ 
@@ -190,7 +192,7 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 .footer{
     font-family: "Roboto";
@@ -199,7 +201,7 @@ body{
     background-color: #2D3F45;
     padding-top: 15px;
     padding-bottom: 15px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 #menu-footer ul{
     padding: 0;
@@ -230,4 +232,37 @@ body{
     background-color: #324950;
     color:#B9B9B9;
     font-size: 14px;
+}
+blockquote {
+    padding-left: 15px;
+    border-left: 4px solid red;
+    border-radius: 4px;
+}
+#white{
+    background: white;
+}
+#back1{
+    background: #FCF0F0;
+}
+.block{
+    padding-top: 14px;
+    padding-bottom: 25px;
+}
+.block h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.tag{
+    font-size: 14px;
+    text-align: center;
+    color:#57984C;
+}
+.tag h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -2px;
+    margin-bottom: -10px;
+}
+.tag img{
+    width: 100%;
 }
