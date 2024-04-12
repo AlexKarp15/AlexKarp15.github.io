@@ -49,6 +49,10 @@ body{
     width: 5%;
     float: left;
 }
+.w-70pro{
+    width: 70%;
+    float: left;
+}
 .aligh-right{
     text-align: right;
 }
@@ -258,6 +262,16 @@ blockquote {
     text-align: center;
     color:#57984C;
 }
+.tag a{
+    font-size: 14px;
+    text-align: center;
+    color:#57984C;
+    text-decoration: none;
+    transition: color .3s;
+}
+.tag a:hover{
+    color:#0dc096;
+}
 .tag h3{
     font-size: 20px;
     font-weight: bold;
@@ -266,4 +280,43 @@ blockquote {
 }
 .tag img{
     width: 100%;
+}
+#back2{
+    background:url(/images/Union-tomato.png) no-repeat center;
+    background-color:#F7F7F7;
+}
+.return a{
+    color:#57984C;
+    align-self:left;
+    font-size: 14px;
+    text-decoration: none;
+}
+.name{
+    font-size: 26px;
+    font-weight: bold;
+}
+#quality p{
+    color:red;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+.info h3{
+    font-size: 20px;
+    font-weight: bold;
+    color:#57984C;
+    margin-bottom: -10px;
+}
+.info img{
+    height:2px;
+    width: 183px;
+}
+.info li{
+    padding: 10px;
+    font-size: 17px;
+    list-style-position: inside;
+    margin-left: -50px;
+}
+.info li::marker{
+    color:#57984C;
 }
