@@ -3,22 +3,24 @@
     <head>
         <title>Contact</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/responsive.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
         <link rel="icon" type="image/ico" href="/images/camera.ico">
+        <meta name="viewport" content="width=320, initial-scale=1.0"/>
     </head>
     <body>
-        <div class="header">
-            <div class="wrapper">
+        <div class="header" id="white">
+            <div class="wrapper" >
                 <div class="row">
-                    <div class="w-2">
+                    <div class="w-2" id="head">
                         <div id="logo">
                             <img src="/images/logo.png" alt="logo">
                         </div>
                     </div>
-                    <div class="w-2 aligh-right">
+                    <div class="w-2 aligh-right" id="head">
                         <div id="search">
-                            <div class="flex">
+                            <div id="search-in" class="flex">
                                 <input type="text" placeholder="Search">
                                 <button>Submit</button>
                             </div>
@@ -30,24 +32,24 @@
                                 <li><a href="/tomato_all.html">Products</a></li>
                                 <li><a href="">Services</a></li>
                                 <li><a href="">R & D</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <img width="100%" src="/images/field.jpg" style="margin-bottom: -3px;">
+        <img width="100%" src="/images/field.jpg" id="banner" style="margin-bottom: -3px;">
         <div id="gray2">
-            <div class="wrapper" >
+            <div class="wrapper" id="contact-us-h1">
                 <h1>Contact us</h1>
-                <img src="/images/Union-text.png">
+                <img src="/images/Union-text.png" id="Union-text">
             </div>
             <div class="wrapper">
                 <div class="row">                    
                     <div class="form">
                         <form action="" method="get" id="contact_us">                                                
-                            <div class="w-3">                            
+                            <div class="w-3" id="cont-form-100">                            
                                 <p>Name *</p>
                                 <input type="text" id="name" name="name" required>
                                 <p>Company Name </p>
@@ -66,7 +68,7 @@
                         </div>
                         <div class="w-10"><p></p></div>
                         <div class="form2">  
-                            <div class="w-2">
+                            <div class="w-2" id="cont-form-100">
                                 <p>You are a</p>
                                 <select type="text" id="job" name="job" required>
                                     <option selected></option>
@@ -76,10 +78,12 @@
                                 <p>If other, please specify</p>
                                 <input type="text" id="details" name="details" required>
                                 <p>You are interested in</p>
-                                <input type="text" id="interest" name="interest" required style="height: 390px;">
+                                <div class="form-inter">
+                                    <input type="text" id="interest" name="interest" required>
+                                </div>
                                 <p>Please type this code</p>
                                 <div class="flex">
-                                    <img width="99px" src="/images/capcha.png" style="padding: 20px; margin-left: -20px;">
+                                    <img width="99px" id="capcha" src="/images/capcha.png">
                                     <textarea required></textarea>                                    
                                     <button type="submit" form="contact_us" value="Submit">Send Message</button>
                                 </div>
@@ -92,7 +96,7 @@
         <div class="address" id="white">
             <div class="wrapper">
                 <div class="centr">
-                    <div class="w-3">                    
+                    <div class="w-3" id="cont-address">                    
                         <h3>Our Address</h3>
                         <img src="/images/Line.png">
                         <p>AGRIDERA Seeds & Agriculture Ltd.</p>
@@ -106,28 +110,31 @@
         </div>
         <div class="footer">
             <div id="menu-footer">
-                <div class="centr">
-                    <div class="w-2" style="padding: 10px;">
-                        <ul>
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="">Company profile</a></li>
-                            <li><a href="/tomato_all.html">Products</a></li>
-                            <li><a href="">Services</a></li>
-                            <li><a href="">R & D</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-5" style="margin-top:5px;">
-                        <ul>
-                            <li><a href=""><img src="/images/Ico_in.png"></a></li>
-                            <li><a href=""><img src="/images/Ico_inst.png"></a></li>
-                            <li><a href=""><img src="/images/Ico_tube.png"></a></li>
-                            <li><a href=""><img src="/images/Ico_tw.png"></a></li>
-                            <li><a href=""><img src="/images/Ico_fb.png"></a></li>
-                        </ul>
+                <div class="wrapper">
+                    <div class="centr" id="centr-special">
+                        <div class="w-2" id="legs" style="padding: 10px;">
+                            <ul>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="">Company profile</a></li>
+                                <li><a href="/tomato_all.html">Products</a></li>
+                                <li><a href="">Services</a></li>
+                                <li><a href="">R & D</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-4" id="legs" style="margin-top:5px;">
+                            <ul>
+                                <li><a href=""><img src="/images/Ico_in.png"></a></li>
+                                <li><a href=""><img src="/images/Ico_inst.png"></a></li>
+                                <li><a href=""><img src="/images/Ico_tube.png"></a></li>
+                                <li><a href=""><img src="/images/Ico_tw.png"></a></li>
+                                <li><a href=""><img src="/images/Ico_fb.png"></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+            </div>               
             <div class="end">
                 <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
             </div>

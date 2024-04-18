@@ -75,7 +75,6 @@ body{
 #search input::placeholder{
     color: #324950;
 }
-
 #search button{
     background:url(/images/ico_search.png) no-repeat center;
     height: 18px;
@@ -112,7 +111,6 @@ body{
 }
 #logo{
     margin:10px 0 0 0;
-
 }
 #logo img{
     height:113px;
@@ -187,20 +185,17 @@ body{
     font-size: 24px;
     font-weight: bold;
     color:#57984C;
-
 }
 .activities h1{
     font-size: 48px;
     font-weight: bold;
     color:#324950;
-
 }
 .centr{
     height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
-
 }
 .footer{
     font-family: "Roboto";
@@ -288,6 +283,7 @@ blockquote {
 #back2{
     background:url(/images/Union-tomato.png) no-repeat center;
     background-color:#F7F7F7;
+    background-size: 100% auto;
 }
 .return a{
     color:#57984C;
@@ -323,6 +319,10 @@ blockquote {
 }
 .info li::marker{
     color:#57984C;
+}
+#download-button{
+    height:55px; 
+    width:225px;
 }
 .form input{
     width:355px;
@@ -377,7 +377,6 @@ blockquote {
 }
 .address{
     text-align: center;
-    margin-bottom: 30xp;
 }
 .address h3{
     color: #57984C;
@@ -395,4 +394,14 @@ blockquote {
 }
 .address a:hover{
     color:#0dc096;
+}
+#tomato-all-text h1{
+    font-size: 44px;
+}
+.form-inter input{
+    height: 390px;
+}
+#capcha{
+    padding: 20px; 
+    margin-left: -20px;
 }
