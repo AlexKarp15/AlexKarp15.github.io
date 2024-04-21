@@ -56,6 +56,9 @@
     .name{
         font-size: 24px;
     }
+    #products li{
+        width: 31.2%;
+    }
 }
 /*----------------------------------------*/
 @media(max-width:1280px){
@@ -115,14 +118,17 @@
         font-size: 13px;  
     }
     #menu-footer img{
-        height: 27px;
-        width: 27px;
+        height: 30px;
+        width: 30px;
     }
     .end{
-        font-size: 12px;
+        font-size: 16px;
     }
     .name{
         font-size: 24px;
+    }
+    #products li{
+        width: 31.2%;
     }
 }
 /*----------------------------------------*/
@@ -196,14 +202,15 @@
         display: none;
     }
     #slider{
-        background-size: 1024px 453.33px;
-        padding: 200px 0;
+        background-size: 1024px 900.33px;
+        padding: 100px 0;
+        margin-top: -400px;
     }
     #slider h1{
         font-size: 36px;
     }
     #categories{
-        margin-top: -20px;
+        margin-top: 20px;
         margin-bottom: 10px;
     }
     #categories img{
@@ -211,7 +218,7 @@
         height: 40px;
     }
     .text{
-        font-size: 14px;
+        font-size: 20px;
     }
     #gray{
         padding: 40px 0;
@@ -228,7 +235,7 @@
         font-size: 36px;
     }
     #gray p{
-        font-size: 16px;
+        font-size: 18px;
     }
     .overlay{
         height: 100px;
@@ -248,9 +255,16 @@
     .activities h1{
         font-size: 30px;
     }
+    .activities p{
+        font-size: 18px;
+    }
     #centr-special{
         display: inline-block;
         width: 100%;
+    }
+    #legs2{
+        width: 100%;
+        text-align: center;
     }
     #legs{
         width: 100%;
@@ -264,11 +278,11 @@
         font-size: 14px;  
     }
     #menu-footer img{
-        height: 27px;
-        width: 27px;
+        height: 40px;
+        width: 40px;
     }
     .end{
-        font-size: 12px;
+        font-size: 16px;
     }
     #banner{
         margin-top: -60px;
@@ -298,6 +312,15 @@
     }
     .name{
         font-size: 20px;
+    }
+    #products li{
+        width: 47%;
+    }
+    .product-title{
+        font-size: 24px;
+    }
+    .product-description{
+        font-size: 18px;
     }
     #quality p{
         font-size: 22px;
@@ -412,7 +435,8 @@
         display: none;
     }
     #slider{
-        background-size: 768px 340px;
+        margin-top: -400px;
+        background-size: 768px 680px;
         padding: 200px 0;
     }
     #slider h1{
@@ -426,7 +450,7 @@
         line-height: 45px;
     }
     #categories{
-        margin-top: -20px;
+        margin-top: 20px;
         margin-bottom: 10px;
     }
     #categories img{
@@ -442,7 +466,7 @@
         width: 25%;
     }
     .text{
-        font-size: 12px;
+        font-size: 19px;
     }
     #gray{
         padding: 40px 0;
@@ -472,7 +496,7 @@
         margin-top: 0px;
     }
     #gray p{
-        font-size: 16px;
+        font-size: 24px;
     }
     .overlay{
         height: 150px;
@@ -497,9 +521,16 @@
     .activities h1{
         font-size: 30px;
     }
+    .activities p{
+        font-size: 24px;
+    }
     #centr-footer{
         display: inline-block;
         width: 100%;
+    }
+    #legs2{
+        width: 100%;
+        text-align: center;
     }
     #legs{
         width: 100%;
@@ -513,11 +544,11 @@
         font-size: 14px;  
     }
     #menu-footer img{
-        height: 27px;
-        width: 27px;
+        height: 34px;
+        width: 34px;
     }
     .end{
-        font-size: 12px;
+        font-size: 14px;
     }
     #banner{
         margin-top: -60px;
@@ -542,25 +573,17 @@
         font-size: 30px;
         text-align: center;
     }
-    #centr-tag{
-        display: inline-block;
-        width: 100%;
-    }
-    #tag-100{
-        width: 100%;
-    }
-    #tag-100 img{
-        width: 100%;
-        height: auto;
-    }
-    #tag-100 h3{
-        font-size: 40px;
-    }
-    #tag-100 p{
-        font-size: 26px;
-    }
     .name{
         font-size: 26px;
+    }
+    #products li{
+        width: 47%;
+    }
+    .product-title{
+        font-size: 24px;
+    }
+    .product-description{
+        font-size: 18px;
     }
     #quality p{
         font-size: 24px;
@@ -707,7 +730,7 @@
         display: none;
     }
     #slider{
-        background-size: 640px 264px;
+        background-size: 640px 530px;
         padding: 120px;
     }
     #slider h1{
@@ -721,12 +744,12 @@
         line-height: 45px;
     }
     #categories{
-        margin-top: -20px;
+        margin-top: 20px;
         margin-bottom: 10px;
     }
     #categories img{
         width: auto;
-        height: 35px;
+        height: 70px;
     }
     #centr-categ{
         display: inline-block;
@@ -734,10 +757,10 @@
     }
     #categ-w7{
         text-align: center;
-        width: 25%;
+        width: 100%;
     }
     .text{
-        font-size: 11px;
+        font-size: 19px;
     }
     #gray{
         padding: 40px 0;
@@ -763,11 +786,11 @@
         width: 100%;
     }
     #gray h1{
-        font-size: 30px;
+        font-size: 36px;
         margin-top: -20px;
     }
     #gray p{
-        font-size: 14px;
+        font-size: 24px;
     }
     .overlay{
         height: 100px;
@@ -792,6 +815,9 @@
     .activities h3{
         font-size: 30px;
     }
+    .activities p{
+        font-size: 20px;
+    }
     #centr-footer{
         display: inline-block;
         width: 100%;
@@ -800,19 +826,34 @@
         width: 100%;
         text-align: center;
     }
+    #legs2{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #legs2 li{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
     #menu-footer{
         padding-top: 10px;
         padding-bottom: 11px;
     }
+    #menu-footer ul li{
+        margin-left: 0px;
+    }
     #menu-footer ul li a{
-        font-size: 12px;  
+        font-size: 18px;  
     }
     #menu-footer img{
-        height: 27px;
-        width: 27px;
+        height: 34px;
+        width: 34px;
     }
     .end{
-        font-size: 11px;
+        font-size: 13px;
     }
     #banner{
         margin-top: -100px;
@@ -840,22 +881,14 @@
     #blocker-100 p{
         font-size: 20px;
     }
-    #centr-tag{
-        display: inline-block;
+    #products li{
         width: 100%;
     }
-    #tag-100{
-        width: 100%;
+    .product-title{
+        font-size: 30px;
     }
-    #tag-100 img{
-        width: 100%;
-        height: auto;
-    }
-    #tag-100 h3{
-        font-size: 32px;
-    }
-    #tag-100 p{
-        font-size: 20px;
+    .product-description{
+        font-size: 24px;
     }
     .name{
         font-size: 26px;
@@ -995,8 +1028,7 @@
     }
     #menu ul li a{
         font-size: 20px;
-        border-bottom: 2px solid #787d7e;
-        
+        border-bottom: 2px solid #787d7e;        
     }
     #menu ul{
         position: fixed;
@@ -1009,11 +1041,11 @@
         display: none;
     }
     #slider{
-        background-size: 400px 177px;
-        padding: 70px;
+        background-size: 400px 354px;
+        padding: 120px;
     }
     #slider h1{
-        font-size: 16px;
+        font-size: 18px;
     }
     #slider a{
         font-size: 10px;
@@ -1028,7 +1060,7 @@
     }
     #categories img{
         width: auto;
-        height: 30px;
+        height: 60px;
     }
     #centr-categ{
         display: inline-block;
@@ -1036,10 +1068,10 @@
     }
     #categ-w7{
         text-align: center;
-        width: 25%;
+        width: 100%;
     }
     .text{
-        font-size: 11px;
+        font-size: 19px;
     }
     #gray{
         padding: 40px 0;
@@ -1065,7 +1097,7 @@
         width: 100%;
     }
     #gray h1{
-        font-size: 24px;
+        font-size: 30px;
         margin-top: -20px;
     }
     #Union-text{
@@ -1073,7 +1105,7 @@
         height: auto;    
     }
     #gray p{
-        font-size: 12px;
+        font-size: 20px;
     }
     .overlay{
         height: 100px;
@@ -1096,10 +1128,10 @@
         width: 50%;
     }
     .activities h3{
-        font-size: 20px;
+        font-size: 28px;
     }
     .activities p{
-        font-size: 14px;
+        font-size: 20px;
     }
     #act-name{
         font-size: 24px;
@@ -1112,19 +1144,34 @@
         width: 100%;
         text-align: center;
     }
+    #legs2{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #legs2 li{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
     #menu-footer{
-        padding-top: 8px;
-        padding-bottom: 9px;
+        padding-top: 10px;
+        padding-bottom: 11px;
+    }
+    #menu-footer ul li{
+        margin-left: 0px;
     }
     #menu-footer ul li a{
-        font-size: 12px;  
+        font-size: 16px;  
     }
     #menu-footer img{
-        height: 24px;
-        width: 24px;
+        height: 30px;
+        width: 30px;
     }
     .end{
-        font-size: 9px;
+        font-size: 11px;
     }
     #banner{
         margin-top: -200px;
@@ -1152,22 +1199,14 @@
     #blocker-100 p{
         font-size: 18px;
     }
-    #centr-tag{
-        display: inline-block;
+    #products li{
         width: 100%;
     }
-    #tag-100{
-        width: 100%;
-    }
-    #tag-100 img{
-        width: 100%;
-        height: auto;
-    }
-    #tag-100 h3{
+    .product-title{
         font-size: 24px;
     }
-    #tag-100 p{
-        font-size: 18px;
+    .product-description{
+        font-size: 17px;
     }
     .name{
         font-size: 20px;
@@ -1322,11 +1361,11 @@
         display: none;
     }
     #slider{
-        background-size: 400px 177px;
-        padding: 70px;
+        background-size: 320px 400px;
+        padding: 120px;
     }
     #slider h1{
-        font-size: 16px;
+        font-size: 17px;
     }
     #slider a{
         font-size: 10px;
@@ -1336,12 +1375,12 @@
         line-height: 35px;
     }
     #categories{
-        margin-top: -20px;
+        margin-top: -50px;
         margin-bottom: 10px;
     }
     #categories img{
         width: auto;
-        height: 30px;
+        height: 45px;
     }
     #centr-categ{
         display: inline-block;
@@ -1349,10 +1388,10 @@
     }
     #categ-w7{
         text-align: center;
-        width: 25%;
+        width: 100%;
     }
     .text{
-        font-size: 11px;
+        font-size: 19px;
     }
     #gray{
         padding: 40px 0;
@@ -1378,7 +1417,7 @@
         width: 100%;
     }
     #gray h1{
-        font-size: 24px;
+        font-size: 26px;
         margin-top: -20px;
     }
     #Union-text{
@@ -1386,7 +1425,7 @@
         height: auto;    
     }
     #gray p{
-        font-size: 12px;
+        font-size: 17px;
     }
     .overlay{
         height: 100px;
@@ -1409,13 +1448,13 @@
         width: 50%;
     }
     .activities h1{
-        font-size: 20px;
+        font-size: 26px;
     }
     .activities h3{
         font-size: 20px;
     }
     .activities p{
-        font-size: 14px;
+        font-size: 17px;
     }
     #act-name{
         font-size: 10px;
@@ -1428,20 +1467,34 @@
         width: 100%;
         text-align: center;
     }
+    #legs2{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #legs2 li{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
     #menu-footer{
-        padding-top: 0px;
-        padding-bottom: 1px;
-        
+        padding-top: 10px;
+        padding-bottom: 11px;
+    }
+    #menu-footer ul li{
+        margin-left: 0px;
     }
     #menu-footer ul li a{
-        font-size: 10px; 
+        font-size: 14px;  
     }
     #menu-footer img{
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
     }
     .end{
-        font-size: 7px;
+        font-size: 10px;
     }
     #banner{
         margin-top: -200px;
@@ -1470,22 +1523,14 @@
     #blocker-100 p{
         font-size: 16px;
     }
-    #centr-tag{
-        display: inline-block;
+    #products li{
         width: 100%;
     }
-    #tag-100{
-        width: 100%;
-    }
-    #tag-100 img{
-        width: 100%;
-        height: auto;
-    }
-    #tag-100 h3{
+    .product-title{
         font-size: 20px;
     }
-    #tag-100 p{
-        font-size: 16px;
+    .product-description{
+        font-size: 14px;
     }
     .name{
         font-size: 20px;

@@ -238,7 +238,7 @@ body{
 }
 blockquote {
     padding-left: 30px;
-    border-left: 4px solid red;
+    border-left: 4px solid rgb(174, 0, 255);
     border-radius: 4px;
     margin-left: 15px;
 }
@@ -246,7 +246,7 @@ blockquote {
     background: white;
 }
 #back1{
-    background: #FCF0F0;
+    background: #c5f0d4;
 }
 .block{
     padding-top: 14px;
@@ -255,30 +255,6 @@ blockquote {
 .block h3{
     font-size: 20px;
     font-weight: bold;
-}
-.tag{
-    font-size: 14px;
-    text-align: center;
-    color:#57984C;
-}
-.tag a{
-    font-size: 14px;
-    text-align: center;
-    color:#57984C;
-    text-decoration: none;
-    transition: color .3s;
-}
-.tag a:hover{
-    color:#0dc096;
-}
-.tag h3{
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: -2px;
-    margin-bottom: -10px;
-}
-.tag img{
-    width: 100%;
 }
 #back2{
     background:url(/images/Union-tomato.png) no-repeat center;
@@ -404,4 +380,37 @@ blockquote {
 #capcha{
     padding: 20px; 
     margin-left: -20px;
+}
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#products li{
+    width: 31.55%;
+    align-self: center;
+    margin: 10px 10px 0 10px;
+}
+.product-title{
+    margin-top: -20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.product-title a{
+    color:#57984C;
+    text-decoration: none;
+    transition: color .3s;
+}
+.product-title a:hover{
+    color:#0dc096;
+}
+.product-description{
+    font-size: 14px;
+    text-align: center;
+    color:#57984C;
+    margin-top: -10px;
+    padding-bottom: 5px;
 }
