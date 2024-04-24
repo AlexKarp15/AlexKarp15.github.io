@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
         <link rel="icon" type="image/ico" href="/images/camera.ico">
         <meta name="viewport" content="width=320, initial-scale=1.0"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" defer></script>
+        <script src="/Vue/main.js" defer></script>
     </head>
     <body>
         <div class="header" id="white">
@@ -41,58 +43,92 @@
         </div>
         <img width="100%" src="/images/field.jpg" id="banner" style="margin-bottom: -3px;">
         <div id="gray2">
-            <div class="wrapper" id="contact-us-h1">
-                <h1>Contact us</h1>
-                <img src="/images/Union-text.png" id="Union-text">
-            </div>
-            <div class="wrapper">
-                <div class="row">                    
-                    <div class="form">
-                        <form action="" method="get" id="contact_us">                                                
-                            <div class="w-3" id="cont-form-100">                            
-                                <p>Name *</p>
-                                <input type="text" id="name" name="name" required>
-                                <p>Company Name </p>
-                                <input type="text" id="company" name="company" required>
-                                <p>Position</p>
-                                <input type="text" id="position" name="position" required>
-                                <p>City</p>
-                                <input type="text" id="city" name="city" required>
-                                <p>Country</p>
-                                <input type="text" id="country" name="country" required>
-                                <p>Telephone</p>
-                                <input type="tel" id="phone" name="phone" required>
-                                <p>Email *</p>
-                                <input type="email" id="mail" name="mail" required>
+            <div id="products">
+            <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->
+                <div class="wrapper" id="contact-us-h1">
+                    <h1>Your cart</h1>
+                    <div class="your-cart">
+                        <table>
+                            <tr class="cart" v-for="item in cart">
+                                <td><img width="100%" v-bind:src="item.image"></td>
+                                <td>{{item.title}}</td>
+                                <td>{{item.short_text}}</td>
+                                <td><button @click="removeFromCart(item.id)">X</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->
+                <div class="wrapper" id="contact-us-h1">
+                    <h1>Contact us</h1>
+                    <img src="/images/Union-text.png" id="Union-text">
+                </div>
+                <div class="wrapper">
+                    <div class="row">
+                        <form action="" method="get" id="contact_us" @submit.prevent="makeOrder" v-if="formVisible">                       
+                            <div class="form">
+                                                                         
+                                <div class="w-3" id="cont-form-100">                            
+                                    <p>Name *</p>
+                                    <input type="text" id="name" name="name" v-model="contactFields.name" required>
+                                    <p>Company Name </p>
+                                    <input type="text" id="company" name="company" v-model="contactFields.company" required>
+                                    <p>Position</p>
+                                    <input type="text" id="position" name="position" v-model="contactFields.position" required>
+                                    <p>City</p>
+                                    <input type="text" id="city" name="city" v-model="contactFields.city" required>
+                                    <p>Country</p>
+                                    <input type="text" id="country" name="country" v-model="contactFields.country" required>
+                                    <p>Telephone</p>
+                                    <input type="tel" id="phone" name="phone" v-model="contactFields.phone" required>
+                                    <p>Email *</p>
+                                    <input type="email" id="mail" name="mail" v-model="contactFields.mail" required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="w-10"><p></p></div>
-                        <div class="form2">  
-                            <div class="w-2" id="cont-form-100">
-                                <p>You are a</p>
-                                <select type="text" id="job" name="job" required>
-                                    <option selected></option>
-                                    <option>seed producer</option>
-                                    <option>other</option>
-                                </select>
-                                <p>If other, please specify</p>
-                                <input type="text" id="details" name="details" required>
-                                <p>You are interested in</p>
-                                <div class="form-inter">
-                                    <input type="text" id="interest" name="interest" required>
-                                </div>
-                                <p>Please type this code</p>
-                                <div class="flex">
-                                    <img width="99px" id="capcha" src="/images/capcha.png">
-                                    <textarea required></textarea>                                    
-                                    <button type="submit" form="contact_us" value="Submit">Send Message</button>
-                                </div>
-                            </div>                          
-                        </div>
-                    </form>                         
+                            <div class="w-10"><p></p></div>
+                            <div class="form2">  
+                                <div class="w-2" id="cont-form-100">
+                                    <p>You are a</p>
+                                    <select type="text" id="job" name="job" v-model="contactFields.job" required>
+                                        <option selected></option>
+                                        <option>seed producer</option>
+                                        <option>other</option>
+                                    </select>
+                                    <p>If other, please specify</p>
+                                    <input type="text" id="details" name="details" v-model="contactFields.details" required>
+                                    <p>You are interested in</p>
+                                    <div class="form-inter">
+                                       <input type="text" id="interest" name="interest" v-model="contactFields.interest" required>
+                                    </div>
+                                    <p>Please type this code</p>
+                                    <div class="flex">
+                                        <img width="99px" id="capcha" src="/images/capcha.png">
+                                        <textarea v-model="contactFields.capcha" required></textarea>                                    
+                                        <button type="submit" form="contact_us" value="Submit" :disabled="formSubmitted">Send Message</button>
+                                    </div>
+                                </div>                          
+                            </div>
+                        </form>                         
+                    </div>
+                </div>       
+        <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->
+                <div class="wrapper" v-if="!formVisible">
+                    <div class="Submitted-information">
+                        <p>Name: {{contactFields.name}}</p>
+                        <p>Company: {{contactFields.company}}</p>
+                        <p>Position: {{contactFields.position}}</p>
+                        <p>City: {{contactFields.city}}</p>
+                        <p>Country: {{contactFields.country}}</p>
+                        <p>Telephone: {{contactFields.phone}}</p>
+                        <p>Email: {{contactFields.mail}}</p>
+                        <p>You are a: {{contactFields.job}}</p>
+                        <p>Details: {{contactFields.details}}</p>
+                        <p>Interest: {{contactFields.interest}}</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->
         <div class="address" id="white">
             <div class="wrapper">
                 <div class="centr">

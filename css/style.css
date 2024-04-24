@@ -381,14 +381,14 @@ blockquote {
     padding: 20px; 
     margin-left: -20px;
 }
-#products{
+.product-tag{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-#products li{
+.product-tag li{
     width: 31.55%;
     align-self: center;
     margin: 10px 10px 0 10px;
@@ -413,4 +413,60 @@ blockquote {
     color:#57984C;
     margin-top: -10px;
     padding-bottom: 5px;
+}
+.prod-info-title{
+    font-size: 26px;
+    font-weight: bold;
+}
+.prod-info-desc{
+    font-size: 18px;
+}
+#tomato-one-button{
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bolder;
+    border:3px #57984C solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 32px;
+    color:#57984C;
+    text-decoration: none;
+    transition: color .3s;
+}
+#tomato-one-button img{
+    padding-right:15px;
+}
+#tomato-one-button:hover{
+    color:#0dc096;
+}
+.your-cart{
+    background-color: rgb(224, 239, 232);
+}
+.cart td{
+    text-align: center;
+}
+.cart td:nth-child(1) {
+    width: 30%;
+}
+.cart td:nth-child(2) {
+    width: 30%;
+    font-size: 32px;
+    color:#57984C;
+    font-weight: bold;
+}
+.cart td:nth-child(3) {
+    width: 30%;
+}
+.cart td:nth-child(4) {
+    width: 10%;
+}
+.cart button{
+    background-color: #fff;
+    font-size: larger;
+    border: 3px #2D3F45 solid;
+    border-radius: 4px;
+}
+.Submitted-information{
+    font-size: 20px;
 }

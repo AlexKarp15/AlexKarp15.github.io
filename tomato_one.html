@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
         <link rel="icon" type="image/ico" href="/images/tomato.ico">
         <meta name="viewport" content="width=320, initial-scale=1.0"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" defer></script>
+        <script src="/Vue/main.js" defer></script>
     </head>
     <body id="back2">
         <div class="header" id="white">
@@ -46,74 +48,59 @@
                 </a>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="row">
-                <div class="w-2" id="tom-info-100">
-                    <div class="name">
-                        <h1><span style="color:#324950;">TAG 1002 (TAG 809) </span><span style="color:#57984C;">Tomato Determinate Red Standard Round</span></h1>
-                    </div>
-                    <div class="wrapper" style="padding-top: 10px;"></div>
-                    <img src="/images/Union-text.png" id="Union-text">
-                    <div class="wrapper" style="padding-top: 20px;"></div>
-                    <div id="quality">
-                        <div class="row">
-                            <div class="w-5">
-                                <img id="qual-img" src="/images/red_icon_tomato.png">
-                            </div>
-                            <div class="w-70pro">                        
-                                <p>Very high yield and excellent fruits quality!</p>
-                            </div>
-                        </div>
-                        <div class="wrapper" style="padding-top: 10px;"></div>
-                    </div>
-                    <div class="info">
-                        <h3>CHARACTERISTICS</h3>
-                        <img src="/images/Line.png">
-                        <p><b>Resistance</b></p>
-                        <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd; </p>
-                        <p>IR: TYLCV</p>
-                    </div>
-                    <div class="info">
-                        <h3>Plant</h3>
-                        <img src="/images/Line.png">
-                        <ul>
-                            <li>Strong vigor that provides good leaf coverage.</li>
-                            <li>Very high productivity with good fruit setting.</li>
-                            <li>Early matured variety.</li>
-                        </ul>
-                    </div>
-                    <div class="info">
-                        <h3>Fruit</h3>
-                        <img src="/images/Line.png">
-                        <ul>
-                            <li>Long shelf life on plant and post harvest.</li>
-                            <li>Nice shiny attractive deep red color.</li>
-                            <li>Average fruit size: 140 – 160 grams.</li>
-                        </ul>
-                    </div>
+
+        <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->  
+        <!--dwdsddwdwdwdwdwddwdwwdwdwdwdw-->  
+<div id="products">
+    <div class="wrapper">
+        <div class="row">
+            <div class="w-2">
+                <div class="prod-info-title">
+                    <span style="color:#324950;"><h1>{{product.title}}</h1></span>
+                    <span style="color:#57984C;"><h2>{{product.short_text}}</h2></span>
                 </div>
-                <div class="w-2" id="tom-info-100">
-                    <img width="100%" src="/images/tag1002.jpg">
+                <div class="wrapper" style="padding-top: 10px;"></div>
+                <img src="/images/Union-text.png" id="Union-text">
+                <div class="wrapper" style="padding-top: 20px;"></div>
+                <div id="quality">
+                    <div class="row">
+                        <div class="w-5">
+                            <img id="qual-img" src="/images/red_icon_tomato.png">
+                        </div>
+                        <div class="w-70pro">                        
+                            <p>Very high yield and excellent fruits quality!</p>
+                        </div>
+                    </div>
                     <div class="wrapper" style="padding-top: 10px;"></div>
-                    <a><img align="right" src="/images/Btn download pdf.png" id="download-button"></a>
-                    <div class="wrapper" style="padding-top: 30px;"></div>
-                    <div class="info">
-                        <h3>Cycle</h3>
-                        <img src="/images/Line.png">
-                        <ul>
-                            <li>Spring</li>
-                            <li>Fall </li>
-                            <li>Winter</li>
-                        </ul>
-                    </div>
-                    <div class="info">
-                        <h3>Color</h3>
-                        <img src="/images/Line.png">
-                        <font style="font-size: 17px;"><p>Red</p></font>
-                    </div>
+                </div>
+            </div>
+            <div class="w-2">
+                <div class="prod-info-image">
+                    <img width="100%" v-bind:src="product.image" alt="Product Image">
+                </div>
+                <div class="wrapper" align="right">
+                    <a id="tomato-one-button" href="#" @click.prevent="addToCart(product.id)" v-if="!btnVisible">
+                        <img src="/images/ico_pdf.png">
+                        <p>Add to cart</p> 
+                    </a> 
+                </div>
+                <div class="wrapper" align="right">
+                    <a id="tomato-one-button" href="/contact.html" v-if="btnVisible">
+                        <img src="/images/ico_pdf.png">
+                        <p>Go to cart</p> 
+                    </a> 
                 </div>
             </div>
         </div>
+    </div>
+    <div class="wrapper">
+        <div class="prod-info-desc">
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+</div>       
+
+<!--dwdsddwdwdwdwdwddwdwwdwdwdwdw--> 
         <div class="wrapper" style="padding-top: 100px;"></div>
         <div class="footer">
             <div id="menu-footer">
