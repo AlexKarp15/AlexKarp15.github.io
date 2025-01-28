@@ -13,8 +13,8 @@ export const login = {
         methods:{
 
         },
-            template: `
-            <div class="flex">
-                Test by Oleksandr Karpuk!
-            </div>
+        template: `
+        <div class="flex">
+            Test by Oleksandr Karpuk!
+        </div>
     `};

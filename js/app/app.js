@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
             this.title=this.$route['name'];
             document.title=this.$route ['name'];
         },
-        toFormData(obj) {
+        toFormData:function(obj) {
             var fd = new FormData();
 
             for (var x in obj) {
