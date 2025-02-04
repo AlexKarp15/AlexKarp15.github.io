@@ -2,6 +2,7 @@ import {router} from './router.js';
 import {msg} from './widgets/msg.js';
 import {popup} from './widgets/popup.js';
 import {header} from './widgets/header.js';
+import { toogle } from './widgets/toogle.js';
 
 document.addEventListener('DOMContentLoaded', function(){
     const main = {
@@ -86,5 +87,6 @@ document.addEventListener('DOMContentLoaded', function(){
     .component('popup',popup)
     .component('msg',msg)
     .use(router)
+    .component('toogle',toogle)
     .mount('#content')
 });
