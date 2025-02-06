@@ -16,7 +16,7 @@ export const popup = {
           var self = this;
           setTimeout(function() {
             let height = self.$refs.popup.clientHeight / 2;
-            self.top = "calc(50% - " + height + "px)";
+            self.top = "calc(44% - " + height + "px)";
           }, 10);
         }
   
