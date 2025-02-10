@@ -141,14 +141,14 @@ export const campaign = {
               if(item && item['line']){
                 for(let i in item['line']){
                   dates.push(i);
-                  // if(item[i].include=='true'){
+                  //if(item[i].include=='true'){
                     clicks.push(item['line'][i].clicks);
                     views.push(item['line'][i].views);
                     leads.push(item['line'][i].leads);
-                  // }
+                  //}
                 }
               }
-              // document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div></div>'
+              document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div><canvas id="myChart"></canvas></div>'
               const ctx = document.getElementById('myChart');
               const xScaleImage = {
                 id:"xScaleImage",
@@ -446,19 +446,19 @@ export const campaign = {
                               </a>
                           </td>
                           <td class="id">
-                              <a href="#" click.prevent="$refs.details.active=1;getDetails(item.id,2)">
+                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,2)">
                                   <template v-if="item.clicks">{{item.clicks}}</template>
                                   <template v-if="!item.clicks">0</template>
                               </a>
                           </td>
                           <td class="id">
-                              <a href="#" click.prevent="$refs.details.active=1;getDetails(item.id,3)">
+                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,3)">
                                   <template v-if="item.leads">{{item.leads}}</template>
                                   <template v-if="!item.leads">0</template>
                               </a>
                           </td>
                           <td class="id">
-                              <a href="#" click.prevent="$refs.details.active=1;getDetails(item.id,4)">
+                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,4)">
                                   <template v-if="item.fclicks">{{item.fclicks}}</template>
                                   <template v-if="!item.fclicks">0</template>
                               </a>
