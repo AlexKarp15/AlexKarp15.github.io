@@ -716,3 +716,26 @@ textarea:focus{
     box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); 
     outline: none; 
 }
+/**/
+.btnS .fa-images{
+    color: #ffffff;
+}
+.btnS .fa-images:hover{
+    color: #ffffff; 
+}
+li:has(a.router-link-active) {
+    position: relative;
+}
+li:has(a.router-link-active)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #00c276;
+    transition: all 0.5s ease;
+}
+li:has(a.router-link-active):hover::after {
+    background-color: transparent;
+}

@@ -97,7 +97,7 @@ export const campaigns = {
             leads.push(item['line'][i].leads);
           }
         }
-        document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div></div><canvas id="myChart"></canvas>'
+        document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div></div><canvas id="myChart"></canvas>';
         const ctx = document.getElementById('myChart');
         const xScaleImage = {
           id:"xScaleImage",
