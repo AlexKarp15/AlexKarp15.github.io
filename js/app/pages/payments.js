@@ -35,7 +35,7 @@ export const payments = {
         <div class="wrapper">
             <div class="flex max-width-pannel">
                 <div class="pannel">
-                    <div class="w30 ptb10 text-start">
+                    <div class="w30 ptb30 text-start">
                         <h1>Payments</h1>
                     </div>
                     <div class="w50"></div>
@@ -44,35 +44,37 @@ export const payments = {
                     </div>
                 </div>
             </div>
-            <div class="table" v-if="data.items!=''">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="id">#</th>
-                            <th class="id">Value</th>
-                            <th>Date</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in data.items">
-                            <td class="id">{{item.id}}</td>
-                            <td class="id">
-                                <a href="#" @click.prevent="parent.formData = item;$refs.payment.active=1;">
-                                    {{item.value}}
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#" @click.prevent="parent.formData = item;$refs.payment.active=1;">
-                                    {{item.date_title}}
-                                </a>
-                            </td>
-                            <td>
-                                {{item.description}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="table-container">
+                <div class="table" v-if="data.items!=''">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="id">#</th>
+                                <th class="id">Value</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in data.items">
+                                <td class="id">{{item.id}}</td>
+                                <td class="id">
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.payment.active=1;">
+                                        {{item.value}}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.payment.active=1;">
+                                        {{item.date_title}}
+                                    </a>
+                                </td>
+                                <td>
+                                    {{item.description}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="empty" v-if="data.items==''">
                 No items

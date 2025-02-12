@@ -89,7 +89,7 @@ export const statistics = {
         <div class="wrapper">
             <div class="flex max-width-pannel">
                 <div class="pannel">
-                    <div class="w20 ptb10 text-start">
+                    <div class="w20 ptb30 text-start">
                         <h1>Statistics</h1>
                     </div>
                     <div class="w60 ptb20 ac">
@@ -128,52 +128,54 @@ export const statistics = {
                     </form>
                 </div>
             </popup>
-            <div class="table" v-if="data.items!=''">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="id"></th>
-                            <th class="image"></th>
-                            <th class="image">Campaign</th>
-                            <th>Link</th>
-                            <th class="id">Views</th>
-                            <th class="id">Clicks</th>
-                            <th class="id">Leads</th>
-                            <th class="id">Fraud clicks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in data.items">
-                            <td class="id">
-                                <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionStatistic()"/>
-                            </td>
-                            <td class="image">
-                                <a href="#" @click.prevent="parent.formData = item;$refs.img.active=1;">
-                                    <img :src="parent.url+'/'+item.img" />
-                                </a>
-                            </td>
-                            <td class="image">{{item.campaign_title}}</td>
-                            <td>{{item.link}}</td>
-                            <td class="id">
-                                {{item.views}}
-                            </td>
-                            <td class="id">
-                                <template v-if="item.clicks">{{item.clicks}}</template>
-                                <template v-if="!item.clicks">0</template>
-                            </td>
-                            <td class="id">
-                                <template v-if="item.leads">{{item.leads}}</template>
-                                <template v-if="!item.leads">0</template>
-                            </td>
-                            <td class="id">
-                                <template v-if="item.fclicks">{{item.fclicks}}</template>
-                                <template v-if="!item.fclicks">0</template>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="table-container">
+                <div class="table" v-if="data.items!=''">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="id"></th>
+                                <th class="image"></th>
+                                <th class="image">Campaign</th>
+                                <th>Link</th>
+                                <th class="id">Views</th>
+                                <th class="id">Clicks</th>
+                                <th class="id">Leads</th>
+                                <th class="id">Fraud clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in data.items">
+                                <td class="id">
+                                    <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionStatistic()"/>
+                                </td>
+                                <td class="image">
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.img.active=1;">
+                                        <img :src="parent.url+'/'+item.img" />
+                                    </a>
+                                </td>
+                                <td class="image">{{item.campaign_title}}</td>
+                                <td>{{item.link}}</td>
+                                <td class="id">
+                                    {{item.views}}
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.clicks">{{item.clicks}}</template>
+                                    <template v-if="!item.clicks">0</template>
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.leads">{{item.leads}}</template>
+                                    <template v-if="!item.leads">0</template>
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.fclicks">{{item.fclicks}}</template>
+                                    <template v-if="!item.fclicks">0</template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="empty" v-if="!data.items>
+            <div class="empty" v-if="data.items==''">
                 No items
             </div>
         </div>

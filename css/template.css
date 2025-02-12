@@ -76,7 +76,9 @@ a{
 
     color:#000;
 }
-
+#menu .fa-bars{
+    display: none;
+}
 /* Форма */
 
 .form {
@@ -395,9 +397,7 @@ td a:hover {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-
-
+}
   .btnS .fa-edit{
     color: #ffffff;
 }
@@ -738,4 +738,448 @@ li:has(a.router-link-active)::after {
 }
 li:has(a.router-link-active):hover::after {
     background-color: transparent;
+}
+
+/*ac1  Адаптация  */
+
+@media(max-width:1200px){
+    .popup-inner .pannel, .popup-inner .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .popup{
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    .cubes{
+        margin: 20px 0;
+    }
+    .filchart{
+        width: 100%;
+    }
+    #myChart{
+        width: 100% !important;
+        /* height: 100% !important; */
+        max-height: 440px !important;
+    }
+    #chartOuter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-height: 440px;
+    }
+    #chartHints{
+        width: 100%;
+    }
+}
+@media(max-width:1024px){
+    .p20 form{
+        width: 90%;
+    }
+    .image{
+        min-width: 100px;
+    }
+    .btnS{
+        white-space: nowrap;
+    }
+    input[type="date"] {
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .al h1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 980px){
+    .pannel div{
+        width: 100%;
+    }
+    input[type="date"] {
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .al h1{
+        font-size: 27px;
+    }
+}
+@media (max-width: 820px){
+    #right-area{
+        display: none;
+    }
+    #left-area{
+        width: 100%;
+    }
+    .p20 form{
+        width: 80%;
+    }
+    .inner-form {
+        padding-top: 50px;
+    }
+    input[type="date"] {
+        width: 90px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .form {
+        height: 60%;
+        width: 70%;
+        top: 75%;
+    }
+    .table .image{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .w10{
+        min-width: 60px;
+    }
+    #menu{
+        align-items: center;
+        justify-content: start;
+    }
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+    #menu ul{
+        display: none;
+    }
+    #menu .active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #3a3a3a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        z-index: 1000;
+    }
+    #menu .active li{
+        height: 5%;
+        margin-bottom: 20px;
+    }
+    li:has(a.router-link-active)::after {
+        height: 0px;
+    }
+    .pannel{
+        flex-direction: column;
+    }
+    .panelTop .pannel{
+        flex-direction: row;
+    }
+    .panelTop .pannel h1{
+        min-width: 250px;
+    }
+    .panelTop .pannel .text-end {
+        margin-top: 0;
+    }
+    .pannel .text-end{
+        margin-top: 20px;
+    }
+    .pannel .text-end{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .ptb30 h1 h2{
+        font-size:30px;
+        text-align: center;
+    }
+    .text-start{
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 150px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .form {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 60%;
+        width: 70%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .table .actions a{
+        margin: 0 1.5px;
+    }
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+    .ac {
+        background: transparent;
+        box-shadow: none;
+    }
+    .table .image{
+        display: none;
+    }
+}
+@media (max-width: 730px){
+    .popup{
+        top: 0 !important;
+        max-width: 1024px !important;
+        width: 100%;
+        margin-left: 0 !important;
+        left: 0 !important;
+        height: 100% !important;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    .cubes{
+        font-size: 24px;
+    }
+    .tabs{
+        display: flex;
+        justify-content: center;
+    }
+    .pannel .text-end{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .ptb30 h1{
+        font-size:30px;
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 150px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .ptb30 h1 h2{
+        font-size:30px;
+        text-align: center;
+    }
+    .text-start{
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 150px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .form {
+        height: 60%;
+        width: 70%;
+        top: 60%;
+    }
+    .table .actions a{
+        margin: 0 1px;
+    }
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+    .ac {
+        background: transparent;
+        box-shadow: none;
+    }
+    .table .image{
+        display: none;
+    }
+}
+@media (max-width: 480px){
+    .p20 form{
+        width: 100%;
+    }
+    .inner-form {
+        padding-top: 20px;
+    }
+    input[type="email"], input[type="password"], input[type="text"] {
+        padding: 10px;
+    }
+    .cubes{
+        font-size: 16px;
+    }
+    .clicks{
+        padding: 25px 0px 5px 10px;
+    }
+    .views{
+        padding: 25px 0px 5px 10px;
+    }
+    .leads{
+        padding: 25px 0px 5px 10px;
+    }
+    .ctr{
+        padding: 25px 0px 5px 10px;
+    }
+    .panelTop .pannel h1{
+        font-size: 24px;
+    }
+    .ptb30 h1{
+        font-size:30px;
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 150px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .ptb30 h1 h2{
+        font-size:30px;
+        text-align: center;
+    }
+    .text-start{
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 130px;
+        height: 45px;
+        font-size: 15px;
+    }
+    .al h1{
+        font-size: 30px;
+    }
+    .form {
+        height: 60%;
+        width: 70%;
+        top: 60%;
+    }
+    .table .actions a{
+        margin: 0 5px;
+    }
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+    .ac {
+        background: transparent;
+        box-shadow: none;
+    }
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }      
+    .table {
+      width: max-content;
+    }
+    .table table {
+        min-width: 800px;
+        border-collapse: collapse;
+    }
+    th, td {
+        white-space: nowrap;
+        padding: 8px;
+    }
+    .table .image{
+        display: none;
+    }
+}
+@media (max-width: 320px){
+    .panelTop{
+        padding-bottom: 20px;
+    }
+    .panelTop .pannel{
+        flex-direction: column;
+    }
+    .panelTop .pannel .text-end {
+        margin-top: 20px;
+    }
+    .tabs li{
+        padding: 7px;
+        margin-right: 7px;
+    }
+    .ptb30 h1{
+        font-size:30px;
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 150px;
+        height: 50px;
+        font-size: 17px;
+    }
+    .al h1{
+        font-size: 38px;
+    }
+    .ptb30 h1 h2{
+        font-size:30px;
+        text-align: center;
+    }
+    .text-start{
+        text-align: center;
+    }
+    input[type="date"] {
+        width: 95px;
+        height: 30px;
+        font-size: 13px;
+    }
+    .al h1{
+        font-size: 22px;
+    }
+    .form {
+        height: 60%;
+        width: 70%;
+        top: 50%;
+    }
+    .table .actions a{
+        margin: 0 5px;
+    }
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+    .ac {
+        background: transparent;
+        box-shadow: none;
+    }
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }      
+    .table {
+      width: max-content;
+    }
+    .table table {
+        min-width: 600px;
+        border-collapse: collapse;
+    }  
+    th, td {
+        white-space: nowrap;
+        padding: 8px;
+    }
+    .table .image{
+        display: none;
+    }
+    .logo img{
+        height: 50px;
+        padding: 5px 0px;
+        object-fit: cover;
+    }
+    .btnS{
+        align-items: center;
+    }
 }

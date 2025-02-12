@@ -363,120 +363,125 @@ export const campaign = {
                   </div>
               </div>
               <br>
-              <div class="table">
-                <table v-if="details!=''">
-                    <thead>
-                        <tr>
-                            <th class="id">#</th>
-                            <th>Type</th>
-                            <th>
-                                IP
-                                <i class="fas fa-caret-up" @click="sort='s.ip';getDetails();" v-if="sort==''"></i>
-                                <i class="fas fa-caret-down" @click="sort='';getDetails();" v-if="sort=='s.ip'" :class="{green:sort=='s.ip'}"></i>
-                            </th>
-                            <th class="id">Date</th>
-                            <th class="id">Site</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(item,i) in details">
-                            <td class="id">{{item.id}}</td>
-                            <td>
-                                <template v-if="item.type==1">Views</template>
-                                <template v-if="item.type==2">Clicks</template>
-                                <template v-if="item.type==3">Leads</template>
-                            </td>
-                            <td>
-                                {{item.ip}}
-                            </td>
-                            <td>
-                                {{item.date}}
-                            </td>
-                            <td>
-                                {{item.site}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+              <div class="table-container">
+                  <div class="table">
+                    <table v-if="details!=''">
+                        <thead>
+                            <tr>
+                                <th class="id">#</th>
+                                <th>Type</th>
+                                <th>
+                                    IP
+                                    <i class="fas fa-caret-up" @click="sort='s.ip';getDetails();" v-if="sort==''"></i>
+                                    <i class="fas fa-caret-down" @click="sort='';getDetails();" v-if="sort=='s.ip'" :class="{green:sort=='s.ip'}"></i>
+                                </th>
+                                <th class="id">Date</th>
+                                <th class="id">Site</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item,i) in details">
+                                <td class="id">{{item.id}}</td>
+                                <td>
+                                    <template v-if="item.type==1">Views</template>
+                                    <template v-if="item.type==2">Clicks</template>
+                                    <template v-if="item.type==3">Leads</template>
+                                </td>
+                                <td>
+                                    {{item.ip}}
+                                </td>
+                                <td>
+                                    {{item.date}}
+                                </td>
+                                <td>
+                                    {{item.site}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
                 <div class="empty" v-if="details==''">
                     No items
                 </div>
             </div>
           </popup>-->
-          <div class="table" v-if="date.items!=''">
-              <table>
-                  <thead>
-                      <tr>
-                          <th class="id">#</th>
-                          <th class="id"></th>
-                          <th class="image"></th>
-                          <th>Size</th>
-                          <th>Link</th>
-                          <th class="id">Views</th>
-                          <th class="id">Clicks</th>
-                          <th class="id">Leads</th>
-                          <th class="id">Fraud clicks</th>
-                          <th class="actions">Actions</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr v-for="(item,i) in data.items">
-                          <td class="id">{{item.id}}</td>
-                          <td class="id">
-                            <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd()"/>
-                          </td>
-                          <td class="image">
-                            <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
-                                <img :src="this.parent.url+'/'+item.img" />
-                            </a>
-                          </td>
-                          <td class="image">
-                            <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
-                                {{item.size}}
-                            </a>
-                          </td>
-                          <td class="table-link">
-                            <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
-                                {{item.link}}
-                            </a>
-                          </td>
-                          <td class="id">
-                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,1)">
-                                  {{item.views}}
-                              </a>
-                          </td>
-                          <td class="id">
-                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,2)">
-                                  <template v-if="item.clicks">{{item.clicks}}</template>
-                                  <template v-if="!item.clicks">0</template>
-                              </a>
-                          </td>
-                          <td class="id">
-                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,3)">
-                                  <template v-if="item.leads">{{item.leads}}</template>
-                                  <template v-if="!item.leads">0</template>
-                              </a>
-                          </td>
-                          <td class="id">
-                              <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,4)">
-                                  <template v-if="item.fclicks">{{item.fclicks}}</template>
-                                  <template v-if="!item.fclicks">0</template>
-                              </a>
-                          </td>
-                          <td class="actions">
+          <div class="table-container">
+            <div class="table" v-if="date.items!=''">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="id">#</th>
+                            <th class="id"></th>
+                            <th class="image"></th>
+                            <th>Size</th>
+                            <th>Link</th>
+                            <th class="id">Views</th>
+                            <th class="id">Clicks</th>
+                            <th class="id">Leads</th>
+                            <th class="id">Fraud clicks</th>
+                            <th class="actions">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(item,i) in data.items">
+                            <td class="id">{{item.id}}</td>
+                            <td class="id">
+                              <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd()"/>
+                            </td>
+                            <td class="image">
                               <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
-                                  <i class="fas fa-edit"></i>
+                                  <img :src="this.parent.url+'/'+item.img" />
                               </a>
-                              <a href="#" @click.prevent="parent.formData = item;iChart = i;$refs.chart.active=1;line(item)">
-                                  <i class="fas fa-chart-bar"></i>
+                            </td>
+                            <td>
+                              <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
+                                  {{item.size}}
                               </a>
-                              <a href="#" @click.prevent="parent.formData = item;delAd();">
-                                  <i class="fas fa-trash-alt"></i>
+                            </td>
+                            <td class="table-link">
+                              <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
+                                  {{item.link}}
                               </a>
-                          </td>
-                      </tr>
-                  </tbody>
-              </table>
+                            </td>
+                            <td class="id">
+                                <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,1)">
+                                    {{item.views}}
+                                </a>
+                            </td>
+                            <td class="id">
+                                <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,2)">
+                                    <template v-if="item.clicks">{{item.clicks}}</template>
+                                    <template v-if="!item.clicks">0</template>
+                                </a>
+                            </td>
+                            <td class="id">
+                                <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,3)">
+                                    <template v-if="item.leads">{{item.leads}}</template>
+                                    <template v-if="!item.leads">0</template>
+                                </a>
+                            </td>
+                            <td class="id">
+                                <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,4)">
+                                    <template v-if="item.fclicks">{{item.fclicks}}</template>
+                                    <template v-if="!item.fclicks">0</template>
+                                </a>
+                            </td>
+                            <td class="actions">
+                                <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" @click.prevent="parent.formData = item;iChart = i;$refs.chart.active=1;line(item)">
+                                    <i class="fas fa-chart-bar"></i>
+                                </a>
+                                <a href="#" @click.prevent="parent.formData = item;delAd();">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
             </div>
             <div class="empty" v-if="data.items==''">
                 No items

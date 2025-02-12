@@ -254,65 +254,67 @@ export const campaigns = {
             </form>
           </div>
         </popup>
-        <div class="table" v-if="date.items!=''">
+        <div class="table-container">
+          <div class="table" v-if="date.items!=''">
             <table>
-                <thead>
-                    <tr>
-                        <th class="id">#</th>
-                        <th class="id"></th>
-                        <th>Title</th>
-                        <th class="id">Views</th>
-                        <th class="id">Clicks</th>
-                        <th class="id">Leads</th>
-                        <th class="id">Fraud clicks</th>
-                        <th class="actions">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(item,i) in data.items">
-                        <td class="id">{{item.id}}</td>
-                        <td class="id">
-                          <toogle v-model="item.published" @update:modelValue="parent.formData = item;action();"/>
-                        </td>
-                        <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>
-                        <td class="id">
-                            <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,1)">
-                                {{item.views}}
-                            </a>
-                        </td>
-                        <td class="id">
-                            <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,2)">
-                                <template v-if="item.clicks">{{item.clicks}}</template>
-                                <template v-if="!item.clicks">0</template>
-                            </a>
-                        </td>
-                        <td class="id">
-                            <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,3)">
-                                <template v-if="item.leads">{{item.leads}}</template>
-                                <template v-if="!item.leads">0</template>
-                            </a>
-                        </td>
-                        <td class="id">
-                            <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,4)">
-                                <template v-if="item.fclicks">{{item.fclicks}}</template>
-                                <template v-if="!item.fclicks">0</template>
-                            </a>
-                        </td>
-                        <td class="actions">
-                            <router-link :to="'/campaign/'+item.id">
-                                <i class="fas fa-edit"></i>
-                            </router-link>
-                            <a href="#" @click.prevent="parent.formData = item; iChart=i; $refs.chart.active=1; line(item)">
-                                <i class="fas fa-chart-bar"></i>
-                            </a>
-                            <a href="#" @click.prevent="parent.formData = item;del();">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
+              <thead>
+                <tr>
+                  <th class="id">#</th>
+                  <th class="id"></th>
+                  <th>Title</th>
+                  <th class="id">Views</th>
+                  <th class="id">Clicks</th>
+                  <th class="id">Leads</th>
+                  <th class="id">Fraud clicks</th>
+                  <th class="actions">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(item, i) in data.items">
+                  <td class="id">{{item.id}}</td>
+                  <td class="id">
+                    <toogle v-model="item.published" @update:modelValue="parent.formData = item; action();" />
+                  </td>
+                  <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>
+                  <td class="id">
+                    <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,1)">
+                      {{item.views}}
+                    </a>
+                  </td>
+                  <td class="id">
+                    <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,2)">
+                      <template v-if="item.clicks">{{item.clicks}}</template>
+                      <template v-if="!item.clicks">0</template>
+                    </a>
+                  </td>
+                  <td class="id">
+                    <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,3)">
+                      <template v-if="item.leads">{{item.leads}}</template>
+                      <template v-if="!item.leads">0</template>
+                    </a>
+                  </td>
+                  <td class="id">
+                    <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,4)">
+                      <template v-if="item.fclicks">{{item.fclicks}}</template>
+                      <template v-if="!item.fclicks">0</template>
+                    </a>
+                  </td>
+                  <td class="actions">
+                    <router-link :to="'/campaign/'+item.id">
+                      <i class="fas fa-edit"></i>
+                    </router-link>
+                    <a href="#" @click.prevent="parent.formData = item; iChart=i; $refs.chart.active=1; line(item)">
+                      <i class="fas fa-chart-bar"></i>
+                    </a>
+                    <a href="#" @click.prevent="parent.formData = item;del();">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
+        </div>
           <div class="empty" v-if="data.items==''">
               No items
           </div>

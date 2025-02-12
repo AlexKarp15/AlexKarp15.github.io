@@ -108,45 +108,47 @@ export const sites = {
                     </form>
                 </div>
             </popup>
-            <div class="table" v-if="data.items!=''">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="id"></th>
-                            <th class="image">Site</th>
-                            <th>Link</th>
-                            <th class="id">Views</th>
-                            <th class="id">Clicks</th>
-                            <th class="id">Leads</th>
-                            <th class="id">Fraud clicks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in data.items">
-                            <td class="id">
-                                <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;action()"/>
-                            </td>
-                            <td class="image">
-                                {{item.site}}
-                            </td>
-                            <td class="id">
-                                {{item.views}}
-                            </td>
-                            <td class="id">
-                                <template v-if="item.clicks">{{item.clicks}}</template>
-                                <template v-if="!item.clicks">0</template>
-                            </td>
-                            <td class="id">
-                                <template v-if="item.leads">{{item.leads}}</template>
-                                <template v-if="!item.leads">0</template>
-                            </td>
-                            <td class="id">
-                                <template v-if="item.fclicks">{{item.fclicks}}</template>
-                                <template v-if="!item.fclicks">0</template>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="table-container">
+                <div class="table" v-if="data.items!=''">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="id"></th>
+                                <th class="image">Site</th>
+                                <th>Link</th>
+                                <th class="id">Views</th>
+                                <th class="id">Clicks</th>
+                                <th class="id">Leads</th>
+                                <th class="id">Fraud clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in data.items">
+                                <td class="id">
+                                    <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;action()"/>
+                                </td>
+                                <td class="image">
+                                    {{item.site}}
+                                </td>
+                                <td class="id">
+                                    {{item.views}}
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.clicks">{{item.clicks}}</template>
+                                    <template v-if="!item.clicks">0</template>
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.leads">{{item.leads}}</template>
+                                    <template v-if="!item.leads">0</template>
+                                </td>
+                                <td class="id">
+                                    <template v-if="item.fclicks">{{item.fclicks}}</template>
+                                    <template v-if="!item.fclicks">0</template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="empty" v-if="data.items==''">
                 No items

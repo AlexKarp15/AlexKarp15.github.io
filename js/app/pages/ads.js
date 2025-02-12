@@ -67,43 +67,45 @@ export const ads = {
                     </form>
                 </div>
             </popup>
-            <div class="table" v-if="data.items!=''">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="id">#</th>
-                            <th class="image"></th>
-                            <th class="image">Campaign</th>
-                            <th>Link</th>
-                            <th class="actions">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in data.items">
-                            <td class="id">{{item.id}}</td>
-                            <td class="image">
-                                <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
-                                    <img :src="parent.url+'/'+item.img" />
-                                </a>
-                            </td>
-                            <td class="image">
-                                <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
-                                    {{item.campaign_title}}
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
-                                    {{item.link}}
-                                </a>
-                            </td>
-                            <td class="actions">
-                                <a href="#" @click.prevent="parent.formData = item;$refs.copy.active=1;">
-                                    <i class="fas fa-copy"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="table-container">
+                <div class="table" v-if="data.items!=''">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="id">#</th>
+                                <th class="image"></th>
+                                <th class="image">Campaign</th>
+                                <th>Link</th>
+                                <th class="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in data.items">
+                                <td class="id">{{item.id}}</td>
+                                <td class="image">
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
+                                        <img :src="parent.url+'/'+item.img" />
+                                    </a>
+                                </td>
+                                <td class="image">
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
+                                        {{item.campaign_title}}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.new.active=1;">
+                                        {{item.link}}
+                                    </a>
+                                </td>
+                                <td class="actions">
+                                    <a href="#" @click.prevent="parent.formData = item;$refs.copy.active=1;">
+                                        <i class="fas fa-copy"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="empty" v-if="data.items==''">
                 No items
